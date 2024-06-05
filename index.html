@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Programs</title>
+  <script>
+    // Task 1: Check Character Type
+    function checkCharacterType() {
+        var input = prompt("Enter a character:");
+
+        if (input >= '0' && input <= '9') {
+            alert("The input is a number.");
+        } else if (input >= 'A' && input <= 'Z') {
+            alert("The input is an uppercase letter.");
+        } else if (input >= 'a' && input <= 'z') {
+            alert("The input is a lowercase letter.");
+        } else {
+            alert("The input is neither a number nor a letter.");
+        }
+    }
+
+    // Task 2: Display Larger Integer
+    function displayLargerInteger() {
+        var num1 = parseInt(prompt("Enter the first integer:"));
+        var num2 = parseInt(prompt("Enter the second integer:"));
+
+        if (num1 > num2) {
+            alert(num1 + " is larger.");
+        } else if (num1 < num2) {
+            alert(num2 + " is larger.");
+        } else {
+            alert("Both integers are equal.");
+        }
+    }
+
+    // Task 3: Check Number Sign
+    function checkNumberSign() {
+        var number = parseInt(prompt("Enter a number:"));
+
+        if (number > 0) {
+            alert("The number is positive.");
+        } else if (number < 0) {
+            alert("The number is negative.");
+        } else {
+            alert("The number is zero.");
+        }
+    }
+
+    // Task 4: Check Vowel
+    function isVowel(char) {
+        return ['a', 'e', 'i', 'o', 'u'].includes(char.toLowerCase());
+    }
+
+    function checkVowel() {
+        var character = prompt("Enter a character:");
+
+        if (isVowel(character)) {
+            alert("The character is a vowel.");
+        } else {
+            alert("The character is not a vowel.");
+        }
+    }
+
+    // Task 5: Password Validation
+    function passwordValidation() {
+        var correctPassword = "password"; // Set the correct password here
+        var enteredPassword = prompt("Enter your password:");
+
+        if (!enteredPassword) {
+            alert("Please enter your password.");
+        } else if (enteredPassword === correctPassword) {
+            alert("Correct! The password you entered matches the original password.");
+        } else {
+            alert("Incorrect password.");
+        }
+    }
+
+    // Task 7: Time Format Conversion
+    function timeFormatConversion() {
+        var time = parseInt(prompt("Enter the time in 24-hour clock format (e.g., 1900 for 7pm):"));
+
+        if (time >= 0 && time < 1200) {
+            alert("Good morning!");
+        } else if (time >= 1200 && time < 1700) {
+            alert("Good afternoon!");
+        } else if (time >= 1700 && time < 2100) {
+            alert("Good evening!");
+        } else if (time >= 2100 && time <= 2359) {
+            alert("Good night!");
+        } else {
+            alert("Invalid time format.");
+        }
+    }
+  </script>
+</head>
+<body>
+  <h1>JavaScript Programs</h1>
+
+
+  <button onclick="checkCharacterType()">Check Character Type</button><br><br>
+  <button onclick="displayLargerInteger()">Display Larger Integer</button><br><br>
+  <button onclick="checkNumberSign()">Check Number Sign</button><br><br>
+  <button onclick="checkVowel()">Check Vowel</button><br><br>
+  <button onclick="passwordValidation()">Password Validation</button><br><br>
+  <button onclick="timeFormatConversion()">Time Format Conversion</button><br><br>
+
+
+  <a href="https://sadiafurqan.github.io/javascript-assigments/">javascript-assigments</a>
+</body>
+</html>
+
